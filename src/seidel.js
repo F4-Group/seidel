@@ -51,7 +51,7 @@ function triangulate(rings) {
 var SHEAR = 1e-10;
 
 function shearTransform(point) {
-    return new Point(point[0] + SHEAR * point[1], point[1]);
+    return new Point(point.x + SHEAR * point.y, point.y, point.z);
 }
 
 // Fisher-Yates shuffle algorithm
